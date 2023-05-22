@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Detalhes do Alimento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="categoria">
+    <ion-card-header>
+      {{ categoria.strCategory }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{ categoria.strCategoryDescription }}</p>
+      <img [src]="categoria.strCategoryThumb" alt="{{ categoria.strCategory }}">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

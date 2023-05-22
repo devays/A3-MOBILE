@@ -1,0 +1,18 @@
+<ion-icon name="search" class="search-icon" (click)="irParaPesquisa()">Pesquisar</ion-icon>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Alimentos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let categoria of categorias" (click)="abrirDetalhes(categoria.id)">
+    <img [src]="categoria.imagem" alt="{{ categoria.nome }}">
+    <ion-card-header>
+      {{ categoria.nome }}
+    </ion-card-header>
+  </ion-card>
+</ion-content>
